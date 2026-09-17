@@ -6,5 +6,5 @@ function esTextoValido(texto) {
 };
 
 function convertirAMinusculas(texto) {
-      return texto.trim().toLowerCase();
-    };
+    return texto.trim().toLowerCase();
+};
