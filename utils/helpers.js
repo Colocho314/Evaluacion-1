@@ -3,8 +3,13 @@ function esTextoValido(texto) {
         return false;
     }
     return texto.trim() !== '';
-};
+}
 
 function convertirAMinusculas(texto) {
     return texto.trim().toLowerCase();
+}
+
+module.exports = {
+    esTextoValido,
+    convertirAMinusculas
 };
