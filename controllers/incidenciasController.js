@@ -1,5 +1,6 @@
-const { esTextoValido } = require('../utils/helpers.js');
+const { esTextoValido, convertirAMinusculas } = require('../utils/helpers.js');
 const incidencias = [];
+let nextId = 1;
 
 const registrarIncidencia = (req, res) => {
     const { empleado, area, descripcion, prioridad } = req.body;
@@ -11,7 +12,7 @@ const registrarIncidencia = (req, res) => {
         return res.status(400).json({ error: 'La prioridad debe ser Alta, Media o Baja' });
     };
     const nuevaIncidencia = {
-        id: incidencias.length + 1,
+        id: nextId++,
         empleado,
         area,
         descripcion,
@@ -22,7 +23,12 @@ const registrarIncidencia = (req, res) => {
     res.status(201).json({ "mensaje": "Incidencia registrada correctamente" });
 };
 
+const obtenerIncidencias = (req, res) => {
+    res.status(200).json(incidencias);
+}
+
 module.exports = {
     registrarIncidencia,
+    obtenerIncidencias,
     incidencias
 };
