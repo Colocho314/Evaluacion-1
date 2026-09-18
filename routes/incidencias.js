@@ -9,7 +9,7 @@ const {
     eliminarIncidencia,
     obtenerEstadisticas,
     obtenerClasificacion
-}=require('../controllers/incidenciasController.js');
+} = require('../controllers/incidenciasController.js');
 
 router.post('/', registrarIncidencia);
 router.get('/', obtenerIncidencias);

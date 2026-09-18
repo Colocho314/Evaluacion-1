@@ -4,6 +4,8 @@
   "description": "Desarrollar una API REST utilizando Express que permita administrar solicitudes de soporte técnico dentro de una empresa.",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

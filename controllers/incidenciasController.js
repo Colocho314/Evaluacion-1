@@ -1,4 +1,4 @@
-const { esTextoValido, convertirAMinusculas } = require('../utils/helpers.js');
+const { esTextoValido } = require('../utils/helpers.js');
 const incidencias = [];
 let nextId = 1;
 
